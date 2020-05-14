@@ -1,0 +1,2 @@
+GET http://{{host}}:{{port}}{{context-path}}/api/report/jasper/product-list
+Content-Type: application/pdf

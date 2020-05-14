@@ -26,3 +26,5 @@ nbdist/
 
 ### filesystem
 .DS_Store
+*.log.*
+*.log

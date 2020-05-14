@@ -1,0 +1,22 @@
+server:
+  port: ${APPLICATION_PORT:8080}
+  servlet:
+    context-path: /@project.artifactId@
+  compression:
+    enabled: true
+    min-response-size: 2KB
+    mime-types: video/mpeg4-generic, video/mpeg, video/mp4, video/ogg, video/3gpp, video/x-matroska, image/gif, image/jpeg, image/png, image/jpg
+# spring configuration
+spring:
+  application:
+    name: @project.artifactId@
+    version: @project.version@
+    fullname: @project.name@
+  mvc:
+    dispatch-options-request: true
+logging:
+  level:
+    org.springframework: ERROR
+    com.tabeldata: ${LOG_LEVEL:DEBUG}
+  file:
+    name: ${LOG_LOCATION:${spring.application.name}.log}
